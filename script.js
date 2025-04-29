@@ -1,3 +1,24 @@
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const role = document.getElementById('role').value;
+
+  // Geçici örnek veri
+  if ((username === 'admin' && password === '1234' && role === 'teacher') ||
+      (username === 'user' && password === '1234' && role === 'student')) {
+    if (role === 'teacher') {
+      window.location.href = '../pages/teacher-dashboard.html';
+    } else {
+      window.location.href = '../index.html'; // öğrenci ana sayfası
+    }
+  } else {
+    document.getElementById('loginError').textContent = "Hatalı giriş bilgileri!";
+  }
+});
+
+
 // Sidebar menüsünün açılmasını sağlamak
 function toggleMenu() {
   var sidebar = document.getElementById("sidebar");
