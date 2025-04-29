@@ -1,58 +1,51 @@
-/* Sidebar gizli olduğunda */
-.sidebar.hidden {
-  display: none;
-}
-
-.content.expanded {
-  margin-left: 0;
-  transition: margin-left 0.3s ease;
-}
-
-/* Sol Menü Stili */
+/* Menü için stil */
 .sidebar {
-  width: 220px;
-  background-color: #e0f7e9;
-  padding: 20px;
-  height: 100vh;
+  width: 250px;
   position: fixed;
-  left: 0;
   top: 0;
+  left: -250px; /* Başlangıçta gizli */
+  height: 100%;
+  background-color: #333;
+  padding-top: 60px;
+  transition: 0.3s;
   z-index: 1000;
-  transition: width 0.3s ease;
 }
 
-/* Menü Butonu */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Menü butonunun yerleşimi */
 .menu-toggle {
+  font-size: 30px;
+  cursor: pointer;
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: #1b5e20;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 1001;
-  border-radius: 5px;
+  z-index: 1100;
 }
 
-/* İçerik Alanı */
+/* İçerik kısmı */
 .content {
-  margin-left: 240px; /* Menü açıldığında içerik sola kayar */
+  margin-left: 270px; /* Menü genişliği kadar boşluk bırakıyoruz */
   padding: 20px;
-  transition: margin-left 0.3s ease;
 }
 
-/* Konu Başlıkları ve İçeriği */
-.topic {
-  display: none;
+/* Chatbot görünürlüğü */
+.tidio-chat iframe {
+  z-index: 9999 !important;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
 }
-
-.topic.active {
-  display: block;
-}
-
-/* Konu 1 ve Konu 2 başlıklarının arasına boşluk ekleyelim */
-.topic {
-  margin-top: 50px; /* Konu başlıkları ile menü arasında boşluk bırak */
-}
-
