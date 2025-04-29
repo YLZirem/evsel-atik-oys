@@ -2,28 +2,19 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Giriş Yap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Sayfası</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="login-container">
     <h2>Giriş Yap</h2>
     <form id="loginForm">
-      <label for="username">Kullanıcı Adı:</label>
-      <input type="text" id="username" required>
-
-      <label for="password">Şifre:</label>
-      <input type="password" id="password" required>
-
-      <label for="role">Rol:</label>
-      <select id="role">
-        <option value="ogrenci">Öğrenci</option>
-        <option value="ogretmen">Öğretmen</option>
-      </select>
-
+      <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+      <input type="password" id="password" placeholder="Şifre" required>
       <button type="submit">Giriş Yap</button>
+      <p id="error-message" style="color:red;"></p>
     </form>
-    <p id="error-message" style="color: red;"></p>
   </div>
 
   <script src="script.js"></script>
