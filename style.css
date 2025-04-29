@@ -1,40 +1,19 @@
-.login-container {
-  width: 300px;
-  margin: 100px auto;
-  padding: 30px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #f4f4f4;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Genel stil */
+body {
+  font-family: Arial, sans-serif;
 }
 
-.login-container h2 {
-  text-align: center;
-}
-
-.login-container input,
-.login-container select,
-.login-container button {
-  width: 100%;
-  padding: 8px;
-  margin-top: 10px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.login-container button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
+/* Menü Butonu */
+.menu-toggle {
+  font-size: 30px;
   cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
 }
 
-.login-container button:hover {
-  background-color: #45a049;
-}
-
-
-/* Menü için stil */
+/* Sol Menü */
 .sidebar {
   width: 250px;
   position: fixed;
@@ -60,20 +39,19 @@
   color: #f1f1f1;
 }
 
-/* Menü butonunun yerleşimi */
-.menu-toggle {
-  font-size: 30px;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1100;
+/* Menü açılıp kapanacak */
+.menu-toggle.active + .sidebar {
+  left: 0;
 }
 
-/* İçerik kısmı */
+/* İçerik alanı */
 .content {
   margin-left: 270px; /* Menü genişliği kadar boşluk bırakıyoruz */
   padding: 20px;
+}
+
+.topic {
+  display: none;
 }
 
 /* Chatbot görünürlüğü */
@@ -85,3 +63,8 @@
   width: 350px;
   height: 500px;
 }
+
+h2 {
+  color: #333;
+}
+
