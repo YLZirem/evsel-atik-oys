@@ -1,9 +1,16 @@
+/* Genel Sayfa Stilleri */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: sans-serif;
-  display: flex;
+  padding: 0;
+  background-color: #f1f1f1;
 }
 
+h2 {
+  color: #1b5e20;
+}
+
+/* Menü Butonu */
 .menu-toggle {
   position: fixed;
   top: 20px;
@@ -17,6 +24,7 @@ body {
   border-radius: 5px;
 }
 
+/* Menü Stili */
 .sidebar {
   width: 220px;
   background-color: #e0f7e9;
@@ -26,42 +34,45 @@ body {
   left: 0;
   top: 0;
   z-index: 1000;
+  transition: width 0.3s ease;
 }
 
 .sidebar a {
   display: block;
+  padding: 10px;
   color: #1b5e20;
-  margin: 10px 0;
   text-decoration: none;
-  font-weight: bold;
-}
-
-.sidebar a:hover {
-  background-color: #b2dfdb;
-  padding-left: 10px;
+  margin: 10px 0;
+  font-size: 16px;
   border-radius: 5px;
 }
 
+.sidebar a:hover {
+  background-color: #81c784;
+}
+
+/* Menü Gizlendiğinde */
+.sidebar.hidden {
+  display: none;
+}
+
+/* İçerik Stili */
 .content {
   margin-left: 240px;
   padding: 20px;
   flex-grow: 1;
+  transition: margin-left 0.3s ease;
 }
 
+.content.expanded {
+  margin-left: 0;
+}
+
+/* Konu Başlıkları */
 .topic {
   display: none;
 }
 
 .topic.active {
-  display: block;
-}
-/* ... diğer stiller */
-
-/* Etkinlik kısmı için stil */
-#etkinlik {
-  display: none;
-}
-
-#etkinlik.active {
   display: block;
 }
