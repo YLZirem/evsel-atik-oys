@@ -17,7 +17,7 @@ function showTopic(topicId) {
   document.getElementById(topicId).style.display = 'block';  // Seçilen konuyu göster
 }
 
-// Sayfa yüklendiğinde, başlangıçta Konu 1'i göster
+// Sayfa yüklendiğinde, başlangıçta Ana Ekranı göster
 window.onload = function () {
-  showTopic('konu1');
+  showTopic('ana-ekran');  // İlk başta "Ana Ekran" gösterilecek
 };
