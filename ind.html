@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evsel Atık ÖYS</title>
+  <title>Evsel Atıklar</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,8 @@
 
   <!-- Sol Menü -->
   <div class="sidebar" id="sidebar">
+    <a href="#" onclick="showTopic('oryantasyon')">Oryantasyon</a>
+    <a href="#" onclick="showTopic('buzkirma')">Buz Kırma</a>
     <a href="#" onclick="showTopic('konu1')">Konu 1: Evsel Atıklar</a>
     <a href="#" onclick="showTopic('konu2')">Konu 2: Geri Dönüşüm Süreci</a>
     <a href="#" onclick="showTopic('video')">Video</a>
@@ -21,30 +23,19 @@
 
   <!-- İçerik Alanı -->
   <div class="content" id="content">
-    <!-- Konu 1 -->
+    <!-- Evsel Atıklar -->
     <section id="konu1" class="topic">
-      <h2>Konu 1: Evsel Atıklar</h2>
-      <p>Evde oluşan atıklar, geri dönüştürülebilir ve dönüştürülemez olarak ayrılır.</p>
+      <h2>Evsel Atıklar Nedir?</h2>
+      <p>Evsel atıklar, evlerde kullanılan ürünlerden çıkan geri dönüştürülebilir ve atık materyallerdir.</p>
     </section>
 
-    <!-- Konu 2 -->
-    <section id="konu2" class="topic">
-      <h2>Konu 2: Geri Dönüşüm Süreci</h2>
-      <p>Atıklar ayrıştırılarak geri kazanım tesislerine gönderilir.</p>
+    <!-- Oryantasyon -->
+    <section id="oryantasyon" class="topic" style="display:none;">
+      <h2>Oryantasyon</h2>
+      <p>Oryantasyon içeriği buraya gelecek.</p>
     </section>
-
-    <!-- Video -->
-    <section id="video" class="topic">
-      <h2>Video</h2>
-      <p>Video eklenecek.</p>
-    </section>
-
-    <!-- Etkinlik -->
-    <section id="etkinlik" class="topic">
-      <h2>Etkinlik: Geri Dönüşüm Oyunu</h2>
-      <p>Bu etkinlikte geri dönüşüm temalı bir oyun oynayarak doğru atıkları geri dönüştürmeyi öğreneceksiniz.</p>
-      <iframe src="https://scratch.mit.edu/projects/123456789/embed" width="485" height="402" frameborder="0" allowfullscreen></iframe>
-    </section>
+    
+    <!-- Diğer içerikler buraya eklenebilir. -->
   </div>
 
   <!-- Chatbot -->
@@ -53,81 +44,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-css
-/* Menü için stil */
-.sidebar {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: -250px; /* Başlangıçta gizli */
-  height: 100%;
-  background-color: #333;
-  padding-top: 60px;
-  transition: 0.3s;
-  z-index: 1000;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-/* Menü butonunun yerleşimi */
-.menu-toggle {
-  font-size: 30px;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1100;
-}
-
-/* İçerik kısmı */
-.content {
-  margin-left: 270px; /* Menü genişliği kadar boşluk bırakıyoruz */
-  padding: 20px;
-}
-
-/* Chatbot görünürlüğü */
-.tidio-chat iframe {
-  z-index: 9999 !important;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 350px;
-  height: 500px;
-}
-
-js
-// Sidebar menüsünün açılmasını sağlamak
-function toggleMenu() {
-  var sidebar = document.getElementById("sidebar");
-  if (sidebar.style.left === "-250px") {
-    sidebar.style.left = "0";
-  } else {
-    sidebar.style.left = "-250px";
-  }
-}
-
-// Konuları gösterme işlevi
-function showTopic(topicId) {
-  var sections = document.querySelectorAll('.topic');
-  sections.forEach(function (section) {
-    section.style.display = 'none';  // Tüm bölümleri gizle
-  });
-  document.getElementById(topicId).style.display = 'block';  // Seçilen konuyu göster
-}
-
-// Sayfa yüklendiğinde, başlangıçta Konu 1'i göster
-window.onload = function () {
-  showTopic('konu1');
-};
