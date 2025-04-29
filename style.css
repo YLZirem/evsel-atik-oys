@@ -1,3 +1,14 @@
+/* İçerik kısmı */
+.content {
+  margin-left: 270px; /* Menü genişliği kadar boşluk bırakıyoruz */
+  padding: 20px;
+}
+
+/* Konular arası geçişte daha rahat görünürlük sağlamak */
+.topic {
+  display: none;
+}
+
 /* Menü için stil */
 .sidebar {
   width: 250px;
