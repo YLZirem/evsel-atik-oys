@@ -1,4 +1,12 @@
-// Fonksiyon: Konu gösterme
+// Menü açıp kapama fonksiyonu
+function toggleMenu() {
+  const sidebar = document.getElementById('sidebar');
+  const content = document.getElementById('content');
+  sidebar.classList.toggle('hidden');
+  content.classList.toggle('expanded');
+}
+
+// Konuları göstermek için fonksiyon
 function showTopic(topicId) {
   // Tüm konuları gizle
   const topics = document.querySelectorAll('.topic');
@@ -11,7 +19,7 @@ function showTopic(topicId) {
   selectedTopic.classList.add('active');
 }
 
-// Başlangıçta ilk konuyu göster
+// Sayfa yüklendiğinde Konu 1'i göster
 document.addEventListener("DOMContentLoaded", function() {
   showTopic('konu1');
 });
