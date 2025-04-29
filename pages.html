@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giriş Yap</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-container">
+    <h2>Evsel Atık ÖYS - Giriş</h2>
+    <form id="loginForm">
+      <label for="username">Kullanıcı Adı:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Şifre:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="role">Giriş Türü:</label>
+      <select id="role" name="role">
+        <option value="student">Öğrenci</option>
+        <option value="teacher">Öğretmen</option>
+      </select>
+
+      <button type="submit">Giriş Yap</button>
+    </form>
+    <p id="loginError" style="color: red;"></p>
+  </div>
+
+  <script src="../scripts/login.js"></script>
+</body>
+</html>
