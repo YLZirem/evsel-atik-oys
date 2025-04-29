@@ -1,25 +1,23 @@
-// Menü açıp kapama fonksiyonu
+// Sidebar menüsünün açılmasını sağlamak
 function toggleMenu() {
-  const sidebar = document.getElementById('sidebar');
-  const content = document.getElementById('content');
-  sidebar.classList.toggle('hidden');
-  content.classList.toggle('expanded');
+  var sidebar = document.getElementById("sidebar");
+  if (sidebar.style.left === "-250px") {
+    sidebar.style.left = "0";
+  } else {
+    sidebar.style.left = "-250px";
+  }
 }
 
-// Konuları göstermek için fonksiyon
+// Konuları gösterme işlevi
 function showTopic(topicId) {
-  // Tüm konuları gizle
-  const topics = document.querySelectorAll('.topic');
-  topics.forEach(topic => {
-    topic.classList.remove('active');
+  var sections = document.querySelectorAll('.topic');
+  sections.forEach(function (section) {
+    section.style.display = 'none';  // Tüm bölümleri gizle
   });
-
-  // Seçilen konuyu göster
-  const selectedTopic = document.getElementById(topicId);
-  selectedTopic.classList.add('active');
+  document.getElementById(topicId).style.display = 'block';  // Seçilen konuyu göster
 }
 
-// Sayfa yüklendiğinde Konu 1'i göster
-document.addEventListener("DOMContentLoaded", function() {
+// Sayfa yüklendiğinde, başlangıçta Konu 1'i göster
+window.onload = function () {
   showTopic('konu1');
-});
+};
