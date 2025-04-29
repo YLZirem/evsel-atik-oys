@@ -23,6 +23,41 @@ input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
 }
 
+/* Profil Sayfası Stil */
+.profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.profile p {
+  font-size: 18px;
+  color: #666;
+}
+
+.profile ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile ul li {
+  margin: 10px;
+}
+
+.profile ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.profile ul li a:hover {
+  text-decoration: underline;
+}
+
 
 /* Menü için stil */
 .sidebar {
