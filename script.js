@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const errorMessage = document.getElementById("error-message");
 
       if (username === "admin" && password === "1234" && role === "ogretmen") {
-        window.location.href = "index.html"; // İstersen başka sayfa da olabilir
+        window.location.href = "index.html";
       } else if (username === "user" && password === "1234" && role === "ogrenci") {
         window.location.href = "index.html";
       } else {
