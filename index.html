@@ -8,25 +8,31 @@
 </head>
 <body>
 
+  <!-- Menü Butonu -->
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
 
+  <!-- Sol Menü -->
   <div class="sidebar" id="sidebar">
     <a href="#" onclick="showTopic('konu1')">Konu 1: Evsel Atıklar</a>
     <a href="#" onclick="showTopic('konu2')">Konu 2: Geri Dönüşüm Süreci</a>
     <a href="#" onclick="showTopic('etkinlik')">Etkinlik</a> <!-- Etkinlik kısmı -->
   </div>
 
+  <!-- İçerik Alanı -->
   <div class="content" id="content">
+    <!-- Konu 1 -->
     <section id="konu1" class="topic">
       <h2>Konu 1: Evsel Atıklar</h2>
       <p>Evde oluşan atıklar, geri dönüştürülebilir ve dönüştürülemez olarak ayrılır.</p>
     </section>
 
+    <!-- Konu 2 -->
     <section id="konu2" class="topic">
       <h2>Konu 2: Geri Dönüşüm Süreci</h2>
       <p>Atıklar ayrıştırılarak geri kazanım tesislerine gönderilir.</p>
     </section>
 
+    <!-- Etkinlik -->
     <section id="etkinlik" class="topic">
       <h2>Etkinlik: Geri Dönüşüm Oyunu</h2>
       <p>Bu etkinlikte geri dönüşüm temalı bir oyun oynayarak doğru atıkları geri dönüştürmeyi öğreneceksiniz.</p>
@@ -34,8 +40,8 @@
     </section>
   </div>
 
-  <!-- Chatbot eklemek için gerekli script -->
-  <script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxx.js" async></script> <!-- Tidio kodu -->
+  <!-- Chatbot -->
+  <script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxx.js" async></script> <!-- Chatbot Embed Kodu buraya -->
 
   <script src="script.js"></script>
 </body>
