@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evsel Atık ÖYS</title>
+  <title>Evsel Atıklar</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,8 @@
 
   <!-- Sol Menü -->
   <div class="sidebar" id="sidebar">
+    <a href="#" onclick="showTopic('oryantasyon')">Oryantasyon</a>
+    <a href="#" onclick="showTopic('buzkirma')">Buz Kırma</a>
     <a href="#" onclick="showTopic('konu1')">Konu 1: Evsel Atıklar</a>
     <a href="#" onclick="showTopic('konu2')">Konu 2: Geri Dönüşüm Süreci</a>
     <a href="#" onclick="showTopic('video')">Video</a>
@@ -21,29 +23,36 @@
 
   <!-- İçerik Alanı -->
   <div class="content" id="content">
-    <!-- Konu 1 -->
+    <!-- Evsel Atıklar -->
+    <section id="oryantasyon" class="topic">
+      <h2>Evsel Atıklar Nedir?</h2>
+      <p>Evsel atıklar, evlerde kullanılan ürünlerden çıkan geri dönüştürülebilir ve atık materyallerdir.</p>
+    </section>
+
+    <!-- Diğer konular -->
+    <section id="buzkirma" class="topic">
+      <h2>Buz Kırma Etkinliği</h2>
+      <p>Geri dönüşüm hakkında bilgileri öğrenmek için buz kırma oyununu oynayın.</p>
+    </section>
+
     <section id="konu1" class="topic">
       <h2>Konu 1: Evsel Atıklar</h2>
       <p>Evde oluşan atıklar, geri dönüştürülebilir ve dönüştürülemez olarak ayrılır.</p>
     </section>
 
-    <!-- Konu 2 -->
     <section id="konu2" class="topic">
       <h2>Konu 2: Geri Dönüşüm Süreci</h2>
       <p>Atıklar ayrıştırılarak geri kazanım tesislerine gönderilir.</p>
     </section>
 
-    <!-- Video -->
     <section id="video" class="topic">
       <h2>Video</h2>
       <p>Video eklenecek.</p>
     </section>
 
-    <!-- Etkinlik -->
     <section id="etkinlik" class="topic">
       <h2>Etkinlik: Geri Dönüşüm Oyunu</h2>
       <p>Bu etkinlikte geri dönüşüm temalı bir oyun oynayarak doğru atıkları geri dönüştürmeyi öğreneceksiniz.</p>
-      <iframe src="https://scratch.mit.edu/projects/123456789/embed" width="485" height="402" frameborder="0" allowfullscreen></iframe>
     </section>
   </div>
 
