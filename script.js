@@ -1,3 +1,15 @@
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (username === "öğrenci" && password === "1234") {
+    window.location.href = "anasayfa.html"; // Başarılı giriş sonrası yönlendirme
+  } else {
+    document.getElementById("error-message").textContent = "Hatalı kullanıcı adı veya şifre.";
+  }
+}
+
+
 // Menü açma/kapama işlevi
 function toggleMenu() {
   var sidebar = document.getElementById("sidebar");
