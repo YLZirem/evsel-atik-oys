@@ -1,55 +1,35 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evsel Atık ÖYS</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- İçerik Alanı -->
+<div class="content" id="content">
+  <!-- Ana Sayfa - Geri Dönüşüm Bilgisi -->
+  <section id="ana-ekran" class="topic">
+    <h2>Geri Dönüşüm Nedir?</h2>
+    <p>Geri dönüşüm, atık maddelerin tekrar kullanılabilir hale getirilmesi sürecidir. Bu süreç, doğal kaynakların korunmasına yardımcı olur, enerji tasarrufu sağlar ve çevre kirliliğini azaltır.</p>
+    <p>Geri dönüşümün temel adımları, atıkların ayrıştırılması, uygun şekilde işlenmesi ve tekrar kullanıma kazandırılmasıdır.</p>
+    <p>Geri dönüşümle ilgili daha fazla bilgi edinmek için "Konu 1" ve "Konu 2" bölümlerini ziyaret edebilirsiniz.</p>
+  </section>
 
-  <!-- Menü Butonu -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
+  <!-- Konu 1 -->
+  <section id="konu1" class="topic">
+    <h2>Konu 1: Evsel Atıklar</h2>
+    <p>Evde oluşan atıklar, geri dönüştürülebilir ve dönüştürülemez olarak ayrılır.</p>
+  </section>
 
-  <!-- Sol Menü -->
-  <div class="sidebar" id="sidebar">
-    <a href="#" onclick="showTopic('konu1')">Konu 1: Evsel Atıklar</a>
-    <a href="#" onclick="showTopic('konu2')">Konu 2: Geri Dönüşüm Süreci</a>
-    <a href="#" onclick="showTopic('video')">Video</a>
-    <a href="#" onclick="showTopic('etkinlik')">Etkinlik</a>
-  </div>
+  <!-- Konu 2 -->
+  <section id="konu2" class="topic">
+    <h2>Konu 2: Geri Dönüşüm Süreci</h2>
+    <p>Atıklar ayrıştırılarak geri kazanım tesislerine gönderilir.</p>
+  </section>
 
-  <!-- İçerik Alanı -->
-  <div class="content" id="content">
-    <!-- Konu 1 -->
-    <section id="konu1" class="topic">
-      <h2>Konu 1: Evsel Atıklar</h2>
-      <p>Evde oluşan atıklar, geri dönüştürülebilir ve dönüştürülemez olarak ayrılır.</p>
-    </section>
+  <!-- Video -->
+  <section id="video" class="topic">
+    <h2>Video</h2>
+    <p>Video eklenecek.</p>
+  </section>
 
-    <!-- Konu 2 -->
-    <section id="konu2" class="topic">
-      <h2>Konu 2: Geri Dönüşüm Süreci</h2>
-      <p>Atıklar ayrıştırılarak geri kazanım tesislerine gönderilir.</p>
-    </section>
-
-    <!-- Video -->
-    <section id="video" class="topic">
-      <h2>Video</h2>
-      <p>Video eklenecek.</p>
-    </section>
-
-    <!-- Etkinlik -->
-    <section id="etkinlik" class="topic">
-      <h2>Etkinlik: Geri Dönüşüm Oyunu</h2>
-      <p>Bu etkinlikte geri dönüşüm temalı bir oyun oynayarak doğru atıkları geri dönüştürmeyi öğreneceksiniz.</p>
-      <iframe src="https://scratch.mit.edu/projects/123456789/embed" width="485" height="402" frameborder="0" allowfullscreen></iframe>
-    </section>
-  </div>
-
-  <!-- Chatbot -->
-  <script src="//code.tidio.co/ploznuho6redpvx0yuno3a6tb7free7r.js" async></script>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <!-- Etkinlik -->
+  <section id="etkinlik" class="topic">
+    <h2>Etkinlik: Geri Dönüşüm Oyunu</h2>
+    <p>Bu etkinlikte geri dönüşüm temalı bir oyun oynayarak doğru atıkları geri dönüştürmeyi öğreneceksiniz.</p>
+    <iframe src="https://scratch.mit.edu/projects/123456789/embed" width="485" height="402" frameborder="0" allowfullscreen></iframe>
+  </section>
+</div>
