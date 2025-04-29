@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evsel Atık ÖYS - Giriş</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Giriş Formu -->
+  <div class="login-container">
+    <h2>Giriş Yapın</h2>
+
+    <!-- Kullanıcı Türü Seçimi -->
+    <div>
+      <button onclick="showLoginForm('teacher')">Öğretmen Girişi</button>
+      <button onclick="showLoginForm('student')">Öğrenci Girişi</button>
+    </div>
+
+    <!-- Öğretmen Girişi Formu -->
+    <div id="teacher-login" class="login-form" style="display:none;">
+      <h3>Öğretmen Girişi</h3>
+      <input type="text" id="teacher-username" placeholder="Kullanıcı Adı" required><br>
+      <input type="password" id="teacher-password" placeholder="Şifre" required><br>
+      <button onclick="login('teacher')">Giriş Yap</button>
+    </div>
+
+    <!-- Öğrenci Girişi Formu -->
+    <div id="student-login" class="login-form" style="display:none;">
+      <h3>Öğrenci Girişi</h3>
+      <input type="text" id="student-username" placeholder="Kullanıcı Adı" required><br>
+      <input type="password" id="student-password" placeholder="Şifre" required><br>
+      <button onclick="login('student')">Giriş Yap</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
