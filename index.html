@@ -66,4 +66,20 @@
     <input type="password" id="password" placeholder="Şifre" required />
     <button onclick="login()">Giriş</button>
   </div>
+
+ <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      
+      // Bu kısımda istersen gerçek kullanıcı kontrolü yaparız
+      if (username === "öğrenci" && password === "1234") {
+        window.location.href = "index.html";
+      } else {
+        alert("Kullanıcı adı veya şifre hatalı.");
+      }
+    }
+  </script>
+</body>
+</html>
       
