@@ -1,19 +1,25 @@
-// Menü açma ve kapama
+// Menü açma/kapama işlevi
 function toggleMenu() {
   var sidebar = document.getElementById("sidebar");
-  sidebar.style.left = (sidebar.style.left === "0px") ? "-250px" : "0px";
+  if (sidebar.style.left === "-250px") {
+    sidebar.style.left = "0";
+  } else {
+    sidebar.style.left = "-250px";
+  }
 }
 
-// Konuları gösterme
+// İçeriğin dinamik gösterilmesi işlevi
 function showTopic(topicId) {
   var sections = document.querySelectorAll('.topic');
-  sections.forEach(function (section) {
+  sections.forEach(function(section) {
     section.style.display = 'none';  // Tüm bölümleri gizle
   });
-  document.getElementById(topicId).style.display = 'block';  // Seçilen konuyu göster
+
+  // Seçilen bölümü göster
+  document.getElementById(topicId).style.display = 'block';
 }
 
-// Sayfa yüklendiğinde, başlangıçta Oryantasyon'u göster
-window.onload = function () {
-  showTopic('oryantasyon');
+// Sayfa yüklendiğinde, giriş yaptıktan sonra "Evsel Atıklar Nedir?" kısmını göster
+window.onload = function() {
+  showTopic('konu1');
 };
