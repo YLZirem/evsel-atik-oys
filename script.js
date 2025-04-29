@@ -1,20 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("loginForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const role = document.getElementById("role").value;
-      const errorMessage = document.getElementById("error-message");
+// Menü açma ve kapama
+function toggleMenu() {
+  var sidebar = document.getElementById("sidebar");
+  sidebar.style.left = (sidebar.style.left === "0px") ? "-250px" : "0px";
+}
 
-      if (username === "admin" && password === "1234" && role === "ogretmen") {
-        window.location.href = "index.html";
-      } else if (username === "user" && password === "1234" && role === "ogrenci") {
-        window.location.href = "index.html";
-      } else {
-        errorMessage.textContent = "Hatalı giriş bilgileri!";
-      }
-    });
-  }
-});
+// Konuları gösterme
+function showTopic(topicId) {
+  var sections = document.querySelectorAll('.topic');
+  sections.forEach(function (section) {
+    section.style.display = 'none';  // Tüm bölümleri gizle
+  });
+  document.getElementById(topicId).style.display = 'block';  // Seçilen konuyu göster
+}
+
+// Sayfa yüklendiğinde, başlangıçta Oryantasyon'u göster
+window.onload = function () {
+  showTopic('oryantasyon');
+};
